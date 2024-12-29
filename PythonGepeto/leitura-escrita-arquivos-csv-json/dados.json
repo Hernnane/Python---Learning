@@ -1,0 +1,20 @@
+{
+    "Nome": "Hernnane",
+    "Idade": 26,
+    "Cidade": "São Paulo",
+    "pessoa_1": {
+        "Nome": "Gabriel",
+        "Idade": 26,
+        "Cidade": "São Bernardo do Campo"
+    },
+    "pessoa_2": {
+        "Nome": "Caio",
+        "Idade": 28,
+        "Cidade": "Londrina"
+    },
+    "pessoa_3": {
+        "Nome": "Guilherme",
+        "Idade": 22,
+        "Cidade": "SP"
+    }
+}

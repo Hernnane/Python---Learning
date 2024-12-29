@@ -1,0 +1,159 @@
+
+### Cronograma de 1 Mês para Aprender AWS (S3, Glue, Athena) e Python com Foco em Integração
+
+#### Objetivo:
+Aprender o básico e funcionalidades intermediárias de AWS S3, Glue, Athena, e Python (com integração) para começar a criar pipelines de dados e realizar análises. A cada semana, o conhecimento será consolidado com exercícios práticos.
+
+---
+
+### **Semana 1: Fundamentos de Python e Introdução ao AWS**
+#### **Duração**: 5 dias úteis + 1 dia de revisão prática  
+#### Objetivo: Compreender os fundamentos de Python e os conceitos iniciais da AWS.
+
+**Dia 1-2: Fundamentos de Python**  
+- **Estudar**:
+  - Instalação do Python e configuração do ambiente (Anaconda ou Visual Studio Code).
+  - Sintaxe básica: variáveis, tipos de dados, estruturas condicionais e de repetição.
+  - Funções, módulos e pacotes (`import` e `pip`).
+  - Leitura/escrita de arquivos (CSV, JSON).
+  - Introdução às bibliotecas: `pandas`, `boto3` e `sqlalchemy`.
+
+- **Prática**:
+  - Criar scripts simples, como ler arquivos CSV e processar informações.
+  - Criar um script que lista arquivos em uma pasta.
+
+**Dia 3: Introdução à AWS e S3**  
+- **Estudar**:
+  - O que é a AWS e como criar uma conta gratuita.
+  - Fundamentos do AWS S3: buckets, objetos, permissões e classes de armazenamento.
+  - Introdução ao console AWS (GUI do S3).
+
+- **Prática**:
+  - Criar um bucket no S3.
+  - Fazer upload e download de arquivos no console.
+
+**Dia 4: Python com S3 (Usando Boto3)**  
+- **Estudar**:
+  - Configurar credenciais AWS no Python com o `boto3`.
+  - Operações básicas com S3: criar buckets, listar buckets e gerenciar objetos.
+
+- **Prática**:
+  - Criar um script Python para fazer upload e download de arquivos do S3.
+  - Listar todos os objetos de um bucket.
+
+**Dia 5: Revisão e Consolidação**  
+- **Prática**:
+  - Crie um script que automatiza o upload de vários arquivos para o S3.
+  - Simule um fluxo onde você armazena arquivos locais no S3 e baixa um deles.
+
+---
+
+### **Semana 2: Glue e Processamento de Dados**
+#### **Duração**: 5 dias úteis + 1 dia de revisão prática  
+#### Objetivo: Entender ETL e começar a processar dados no AWS Glue.
+
+**Dia 6: Fundamentos do AWS Glue**  
+- **Estudar**:
+  - O que é ETL e o papel do Glue.
+  - Glue Data Catalog: criar tabelas e entender esquemas.
+  - Como o Glue interage com o S3.
+
+- **Prática**:
+  - Criar um Data Catalog no Glue com arquivos armazenados no S3.
+
+**Dia 7: Glue ETL Jobs e PySpark**  
+- **Estudar**:
+  - Estrutura de jobs no Glue.
+  - Introdução ao PySpark no Glue.
+
+- **Prática**:
+  - Criar um job que lê um arquivo JSON do S3, transforma para CSV e salva novamente no S3.
+
+**Dia 8-9: PySpark Avançado no Glue**  
+- **Estudar**:
+  - Funções de transformação no PySpark (ex.: filtros, joins, agregações).
+  - Conversão de formatos (CSV para Parquet).
+
+- **Prática**:
+  - Criar um pipeline ETL com várias transformações.
+  - Salvar o resultado no S3 em formato otimizado (Parquet).
+
+**Dia 10: Revisão e Exercícios Práticos**  
+- **Prática**:
+  - Criar um pipeline que:
+    1. Lê um arquivo CSV do S3.
+    2. Filtra dados com base em condições específicas.
+    3. Salva o resultado em um novo bucket no S3.
+
+---
+
+### **Semana 3: AWS Athena e Integração com Python**
+#### **Duração**: 5 dias úteis + 1 dia de revisão prática  
+#### Objetivo: Analisar dados no S3 com Athena e integrá-lo ao Python.
+
+**Dia 11: Introdução ao AWS Athena**  
+- **Estudar**:
+  - Como o Athena funciona e sua integração com o S3.
+  - Criar uma tabela no Athena diretamente do S3.
+  - Noções básicas de SQL para consultas no Athena.
+
+- **Prática**:
+  - Criar tabelas no Athena a partir de dados no S3.
+  - Executar consultas básicas no console.
+
+**Dia 12-13: Consultas Avançadas no Athena**  
+- **Estudar**:
+  - Filtragem, agregações e joins em SQL.
+  - Particionamento e otimização de dados no S3 para Athena.
+
+- **Prática**:
+  - Criar tabelas particionadas no Athena.
+  - Consultar dados filtrados por data ou categorias.
+
+**Dia 14: Athena com Python (Boto3)**  
+- **Estudar**:
+  - Executar consultas Athena usando Python.
+  - Recuperar e processar resultados no Python.
+
+- **Prática**:
+  - Criar um script que consulta o Athena e salva os resultados como CSV no S3.
+
+**Dia 15: Revisão e Projeto Prático**  
+- **Prática**:
+  - Criar um pipeline completo:
+    1. Armazenar arquivos brutos no S3.
+    2. Criar uma tabela no Glue.
+    3. Executar uma consulta no Athena e processar o resultado com Python.
+
+---
+
+### **Semana 4: Projetos Finais e Consolidação**
+#### **Duração**: 5 dias úteis + 1 dia de revisão prática  
+#### Objetivo: Combinar todo o aprendizado em projetos reais.
+
+**Dia 16-18: Projeto 1 - Pipeline ETL Completo**  
+- Criar um pipeline que:
+  1. Carregue dados brutos para o S3.
+  2. Use o Glue para transformar os dados.
+  3. Armazene os dados transformados no S3.
+  4. Consulte os dados transformados com o Athena usando Python.
+
+**Dia 19-20: Projeto 2 - Dashboard Simples**  
+- Criar um script Python que:
+  1. Consulta o Athena para obter métricas (ex.: vendas diárias).
+  2. Gera gráficos simples com `matplotlib` ou `seaborn`.
+
+**Dia 21: Revisão Geral e Documentação**  
+- Consolidar o aprendizado, organizar os scripts e criar um resumo do que foi aprendido.
+
+---
+
+### **Recursos Recomendados**:
+- **Python**: Curso básico/intermediário no [freeCodeCamp](https://www.freecodecamp.org/).
+- **AWS S3, Glue e Athena**:
+  - Documentação oficial da AWS.
+  - Cursos na [AWS Training](https://aws.amazon.com/training/).
+  - Plataforma [A Cloud Guru](https://acloudguru.com/).
+
+### Resultado Final:
+Ao final do mês, você será capaz de criar pipelines de dados automatizados, integrar Python com AWS e realizar análises.

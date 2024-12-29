@@ -1,0 +1,13 @@
+******************************************PASSOS PADRÃO******************************************
+1. Abrir o repositório do projeto pelo CMD e iniciar o Jupyter Notebook - (Agora é só dar continuidade ao projeto);
+
+******************************************REGRAS PYTHON******************************************
+1. Funções em Python começam com DEF, seguida do nome da função e os parênteses (possíveis parâmetros);
+	Ex: def bubble_sort(arr): 
+
+2. 
+
+******************************************Métodos Existentes******************************************
+1. len(x) - Define o tamanho de uma estrutura;
+2. range(x) - Cria uma sequência de números;
+3. 
