@@ -10,3 +10,111 @@
 	*HAVING: Filtra os grupos criados com GROUP BY.
 	
 OBS => Para utilizar as funções agragadas deve-se usar o comando 'AS' e criar um nome para a consulta, para gerar uma tabela onde será exibido o resultado da consulta!
+
+*******************************ROTEIRO PADRÃO PARA SEGUIR AO CRIAR UM COMANDO SQL*******************************
+Roteiro Padrão para Criar Comandos SQL
+
+    1. IDENTIFIQUE O OBJETIVO DA CONSULTA:
+        * Pergunte: O que quero saber? Quais colunas/valores preciso?
+
+    2. ESCOLHA AS TABELAS:
+        * Decida de quais tabelas buscar os dados.
+
+    3. DETERMINE OS RELACIONAMENTOS (SE APLICÁVEL):
+        * Use JOIN apropriados para combinar as tabelas relacionadas.
+
+    4. FILTRE OS DADOS:
+        * Use WHERE para restringir os resultados aos critérios desejados.
+
+    5. AGRUPE (SE NECESSÁRIO):
+        * Para cálculos como soma, contagem, etc., use GROUP BY.
+
+    6. ORDENE O RESULTADO (OPCIONAL):
+        * Use ORDER BY para exibir os resultados em uma ordem específica.
+
+    7. EXECUTE E VALIDE:
+        * Teste a consulta com diferentes condições para garantir que o resultado é o esperado.
+
+
+*******************************OPERAÇÕES AVANÇADAS NO BD*******************************
+1. ÍNDICES:
+	* Servem para acelerar o tempo de duração de consultas recorrentes;
+	* índices são colocados em COLUNAS específicas dentro de tabelas;
+	* As operações de escrita que afetam essas colunas configuradas com índice levam mais tempo para serem feitas, pois precisam atualizar o índice;
+	* A atualização do índice em operações de escrita são feitas automaticamente pelo banco de dados.
+	* CREATE INDEX nome_do_index ON tabela(coluna) => [Cria o index];
+	* DROP INDEX nome_do_index ON tabela => Exclui o índice (não precisa citar a coluna específica, já que o nome do índice está sendo informado);
+
+2. VIEWS: 
+	* Servem para que não seja preciso ficar repetindo consultas grandes e complexas (NECESSARIAMENTE PARA CONSULTAS SELECT);
+	* Chama a view com o nome definido pelo usuário ao invés de digitar a consulta completa;
+	* Da pra filtrar os resultados da consulta dessa view.
+	* CREATE VIEW nome_da_view AS [CÓDIGO DA CONSULTA] => Criando a View;
+	* ALTERN VIEW nome_da_view AS [NOVO CÓDIGO DA CONSULTA] => Atualiza a view;
+	* DROP VIEW nome_da_view.
+
+3. STORED PROCEDURE:
+	* Serve para eu configurar operações complexas a serem feitas no banco de dados de maneira dinâmica e que aceitam parâmentros;
+	* Automatização de processos no banco;
+	* Tem que COMEÇAR & TERMINAR;
+	* Criar uma SP ESTÁTICA:
+	-------------------------------------------------
+	|	CREATE PROCEDURE nome_da_procedure	|
+	|	AS					|
+	|	BEGIN					|
+	|		[CÓDIGO DA OPERAÇÃO NO BD]	|
+	|	END;					|
+	-------------------------------------------------
+	* Criar uma SP DINÂMICA:
+	-------------------------------------------------
+	|	CREATE PROCEDURE nome_da_procedure	|
+	|		@coluna_da_tabela tipo_de_dado,	|
+	|		@coluna_da_tabela tipo_de_dado,	|
+	|		@coluna_da_tabela tipo_de_dado,	|
+	|		@coluna_da_tabela tipo_de_dado	|
+	|	AS					|
+	|	BEGIN					|
+	|		[CÓDIGO DA OPERAÇÃO NO BD]	|
+	|	END;					|
+	-------------------------------------------------
+	* Alterar uma SP DINÂMICA:
+	-------------------------------------------------
+	|	ALTERN PROCEDURE nome_da_procedure	|
+	|		@coluna_da_tabela tipo_de_dado,	|
+	|		@coluna_da_tabela tipo_de_dado,	|
+	|		@coluna_da_tabela tipo_de_dado,	|
+	|		@coluna_da_tabela tipo_de_dado	|
+	|	AS					|
+	|	BEGIN					|
+	|		[CÓDIGO DA OPERAÇÃO NO BD]	|
+	|	END;					|
+	-------------------------------------------------
+	*Excluir uma SP:
+	-------------------------------------------------
+	|	DROP PROCEDURE nome_da_procedure;	|
+	-------------------------------------------------
+	*Utilizar uma SP:
+	------------------------------------------------------------------
+	|	EXEC nome_da_procedure 					 |
+	|		@coluna_da_tabela = valor_do_registro_da_coluna, |
+	|		@coluna_da_tabela = valor_do_registro_da_coluna, |
+	|		@coluna_da_tabela = valor_do_registro_da_coluna; |
+	------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
